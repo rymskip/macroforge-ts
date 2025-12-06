@@ -48,17 +48,17 @@
 			"initialization_options": {
 				"autoUseWorkspaceTsdk": true,
 				"typescript": {
-					"tsdk": "/Users/jakoblochinski/Softworks/GitHub/ts-macros/node_modules/typescript/lib"
+					"tsdk": "/Users/jakoblochinski/Softworks/GitHub/macroforge/node_modules/typescript/lib"
 				},
 				"tsserver": {
 				    "maxTsServerMemory": 8192,
                     "nodePath": "/Users/jakoblochinski/.pixi/envs/nodejs/bin/node",
-					"logDirectory": "/Users/jakoblochinski/Softworks/GitHub/ts-macros/.tsserver-logs",
+					"logDirectory": "/Users/jakoblochinski/Softworks/GitHub/macroforge/.tsserver-logs",
 					"logVerbosity": "verbose",
 					"globalPlugins": [
 						{
 							"name": "ts-derive-plugin",
-							"location": "/Users/jakoblochinski/Softworks/GitHub/ts-macros/packages/ts-derive-plugin",
+							"location": "/Users/jakoblochinski/Softworks/GitHub/macroforge/packages/ts-derive-plugin",
 							"enableForWorkspaceTypeScriptVersions": true
 						}
 					]
