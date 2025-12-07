@@ -48,20 +48,29 @@
 			"initialization_options": {
 				"autoUseWorkspaceTsdk": true,
 				"typescript": {
-					"tsdk": "/Users/jakoblochinski/Softworks/GitHub/macroforge/node_modules/typescript/lib"
-				},
-				"tsserver": {
-				    "maxTsServerMemory": 8192,
-                    "nodePath": "/Users/jakoblochinski/.pixi/envs/nodejs/bin/node",
-					"logDirectory": "/Users/jakoblochinski/Softworks/GitHub/macroforge/.tsserver-logs",
-					"logVerbosity": "verbose",
-					"globalPlugins": [
-						{
-							"name": "tsserver-plugin-macroforge",
-							"location": "/Users/jakoblochinski/Softworks/GitHub/macroforge/packages/tsserver-plugin-macroforge",
-							"enableForWorkspaceTypeScriptVersions": true
-						}
-					]
+					"tsdk": "/Users/jakoblochinski/Softworks/GitHub/macroforge-ts/node_modules/typescript/lib",
+					"tsserver": {
+						"maxTsServerMemory": 8192,
+						"logDirectory": "/Users/jakoblochinski/Softworks/GitHub/macroforge-ts/.tsserver-logs",
+						"logVerbosity": "verbose",
+						"allowLocalPluginLoads": true,
+						"pluginProbeLocations": [
+							"/Users/jakoblochinski/Softworks/GitHub/macroforge-ts/packages/tsserver-plugin-macroforge/dist",
+							"/Users/jakoblochinski/Softworks/GitHub/macroforge-ts/packages/tsserver-plugin-macroforge"
+						],
+						"plugins": [
+							{
+								"name": "/Users/jakoblochinski/Softworks/GitHub/macroforge-ts/packages/tsserver-plugin-macroforge/dist/index.js"
+							}
+						],
+						"globalPlugins": [
+							{
+								"name": "/Users/jakoblochinski/Softworks/GitHub/macroforge-ts/packages/tsserver-plugin-macroforge/dist/index.js",
+								"enableForWorkspaceTypeScriptVersions": true,
+								"languages": ["typescript", "typescriptreact", "javascript", "javascriptreact"]
+							}
+						]
+					}
 				}
 			}
 		}
